@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container p {
+    font-size: 40px;
+    padding: 10px;
+    color: #2c2c30;
+}
+.container .selected p {
+    border: 3px solid #2c2c30;
+    border-radius: 5px;
+}
+#plus {
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    margin: auto;
+    top: 100px;
+    left: auto;
+    right: 100px;
+    z-index: 1000;
+}
+#plus svg {
+    height: 75px;
+    width: 75px;
+    fill: rgba(44, 44, 48, 0.3);
+}
+#plus svg:hover,
+#minus svg:hover {
+    fill: #2c2c30;
+}
+.parent {
+    position: relative;
+}
+#minus {
+    position: absolute;
+    background: none;
+    margin: auto;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    top: auto;
+    bottom: 100px;
+}
+#minus svg {
+    height: 75px;
+    width: 75px;
+    fill: rgba(44, 44, 48, 0.3);
+}
+.light svg {
+    fill: rgba(255, 255, 255, 0.3) !important;
+}
+.dark svg {
+    fill: rgba(44, 44, 48, 0.3) !important;
+}
+.container .selected .light:not(button) {
+    border: 3px solid white !important;
+}
+.container .selected .dark:not(button) {
+    border: 3px solid #2c2c30 !important;
+}
+.light {
+    color: white !important;
+}
+.dark {
+    color: #2c2c30 !important;
+}
